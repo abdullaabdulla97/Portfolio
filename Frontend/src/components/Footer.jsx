@@ -60,7 +60,7 @@ function Footer() { // Define the Footer component
             <div className="footer-icon-social"> {/*Container for external social icons*/}
                 <ul>
                     <li> {/*List of external profile links*/}
-                        <a href="https://linkedin.com" // my LinkedIn URL
+                        <a href="https://www.linkedin.com/in/abdulla-abdulla-350a0937b/" // my LinkedIn URL
                         target="_blank"  // Open the profile in a new tab
                         rel="noopener noreferrer" // Security: prevent tab hijacking
                         className="navbar--content"> {/*CSS class for styling*/}
@@ -73,7 +73,7 @@ function Footer() { // Define the Footer component
                         </li>
                         <li> {/*Github icon link*/}
                             <a 
-                            href="https://github.com" // My GitHub profile URL
+                            href="https://github.com/abdullaabdulla97" // My GitHub profile URL
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="navbar--content">

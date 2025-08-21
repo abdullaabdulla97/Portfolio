@@ -19,18 +19,17 @@ It showcases my projects, skills, and provides an easy way to contact me.
 
 ## 📸 Screenshots
 
-| Home | Projects | Contact |
-|---|---|---|
-| ![Home page hero with headline and CTA](assets/screenshots/home-desktop.png) | ![Projects grid with tech tags and GitHub links](assets/screenshots/projects-desktop.png) | ![Contact form with inputs and send button](assets/screenshots/contact-desktop.png) |
-
+| Home | About Me | Skills | Projects | Contact |
+|---|---|---|---|---|
+| ![Home page screenshot](screenshots/Home.png) | ![About Me screenshot](screenshots/About-Me.png) | ![Skills screenshot](screenshots/Skills.png) | ![Projects screenshot](screenshots/Projects.png) | ![Contact screenshot](screenshots/Contact.png) |
 ---
 
 ## ⚙️ Run Locally
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/abdullaabdulla97/portfolio-project.git
+cd portfolio-project
 
 # Install dependencies
 npm install
