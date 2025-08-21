@@ -1,0 +1,854 @@
+/* Global CSS */
+
+body { /*Styles the whole page*/
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: "Arial", sans-serif;
+    -moz-osx-font-smoothing: "Arial", sans-serif;
+    font-style: normal;
+}
+
+h1, /*Start of a group selector to reset margin on heading and paragraphs*/
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+:root { /*Defines reusable CSS variables (custom properties)*/
+    --primary-color: #5e3bee;
+    --heading-color: #282938;
+    --bg-shade: #addce632;
+    --github-color: #e62872;
+    --darkblue: #1c1e53;
+    --black: #000000;
+    --white: #ffffff;   
+}
+
+.btn { /*Base button style shared by multiple buttons*/
+    font-family: "Arial";
+    display: inline-block;
+    padding: 18px 38px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.btn-outline-primary { /*Outlined button variant using the brand color*/
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline-primary:hover { /*Hover state for the outlined button*/
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+/* Global CSS Ends */
+
+/*Main Headings*/
+
+/* Heading 1 */
+h1 { /*Styles for h1 elements*/
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+/* Heading 2 */
+h2 { /*Styles for h2 elements*/
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+/* Heading 3 */
+h3 { /*Styles for h3 elements*/
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+
+/*Navbar*/
+.navbar { /*The container for the whole navbar*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 60px;
+    background: var(--white);
+    box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar--items { /*Wrapper that holds the nav links*/
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar--items > ul { /*Direct <ul> list inside the items wrapper*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    text-decoration: none;
+    margin: 0;
+    padding-top: 0;
+}
+
+.navbar--items ul > li > a { /*Styles for the anchor links inside the list*/
+    text-decoration: none;;
+}
+
+.navbar--content { /*Styles applied to the link text*/
+    color: var(--darkblue);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.navbar--active-content { /*Style for the active link (handled by JS plugin)*/
+    color: var(--primary-color);
+}
+
+.nav__hamburger { /*Hamburger menu button (for mobile)*/
+    display: none;
+    width: 2.5rem;
+    height: 1.8rem;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.nav__hamburger__line { /*Each of the three bars in the hamburger*/
+    display: block;
+    height: 0.3rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.7rem;
+    transition: all ease-in-out 0.2s;
+}
+
+@media (max-width: 1200px) { /*Responsive rules for screens 1200px wide or smaller*/
+    .nav__hamburger {
+        display: flex;
+        z-index: 300;
+    }
+
+
+    .navbar--items { /*The sliding menu panel on small screens*/
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        top: -30rem;
+        left: 0;
+        width: 100%;
+        transition: all 0.4s;
+        z-index: 1001;
+    }
+
+    .navbar--items ul { /*The list inside the mobile dropdown*/
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0 0.6rem;
+        margin: 0;
+    }
+
+    .navbar--items ul li { /*Each list item in the dropdown*/
+        text-align: center;
+    }
+
+    .navbar--items ul li a { /*Each link in the dropdown*/
+        padding: 0.5rem;
+    }
+
+    .navbar--items.active { /*Class added by JS to show the menu*/
+        top: 60px;
+    }
+
+    .nav__hamburger.active :nth-child(1) { /*When active, animate the first bar*/
+        transform: rotate(45deg) translate(0.45rem, 0.2rem);
+    }
+
+    .nav__hamburger.active :nth-child(2) { /*When active, hide the middle bar*/
+        opacity: 0;
+    }
+
+    .nav__hamburger.active :nth-child(3) { /*When active, animate the third bar*/
+        transform: rotate(-45deg) translate(0.45rem, -0.2rem);
+    }
+}
+
+/* Navbar Style Ends */
+
+/* Hero Section Style */
+.hero-section { /*Container for the hero area*/
+    padding: 135px 84px 135px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background-color: var(--bg-shade);
+}
+
+.hero-section-content { /*Wrapper around the hero text*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.hero-section-content-box { /*Extra container for spacing adjustment */
+    margin-top: 24px;
+}
+
+.hero-description { /*Smaller introductory line in the hero*/
+    color: var(--heading-color);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 70px;
+    align-self: stretch;
+}
+
+.hero-section-title { /*Main heading in the hero*/
+    color: var(--primary-color);
+}
+
+.hero-section-description { /*Paragraph description under the title*/
+    color: var(--darkblue);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+
+@media only screen and (max-width: 1800px) { /*Very large screens down to 1800px*/
+    .hero-section-title {
+        font-size: 68px;
+        line-height: 70px;
+    }
+}
+
+@media only screen and (max-width: 1200px) { /*Tablet/phone responsiveness*/
+    .btn-outline-primary {
+        display: none;
+    }
+
+    .hero-section { /*Adjust hero layout on smaller screens*/
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 70px;
+    }
+
+    .hero-section-title, .hero-section-description { /*For title and paragraph in hero*/
+        text-align: center;
+    }
+
+    .hero-section-content, .hero-section-content-box { /*Content wrapper*/
+        align-items: center;
+    }
+
+    .hero-section-title { /*Main hero title on small screens*/
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .hero-section-content-box { /*Spacing adjustments on small screens*/
+        gap: 10px;
+    }
+
+    .hero-description { /*Intro line on small screens*/
+        text-align: center;
+    }
+
+}
+
+
+/* Hero Section Style End */
+
+/* Skills Section Style */
+.skills-section { /*Outer container for the skills area*/
+    padding: 10rem 2rem;
+    background: var(--white);
+}
+
+.section-container { /*Generic container (used for width constraints)*/
+    max-width: 2500px;
+    margin: 0;
+}
+
+.skill-section-title { /*The heading for the skills section*/
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.skills-grid { /*Grid layout for the skill cards*/
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) { /*Screens that are 800px and wider*/
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.skill-card { /*Each skill category card*/
+    background: var(--bg-shade);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px -2px var(--black);
+}
+
+.skill-card:hover { /*When the mouse hovers over a card*/
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px;
+}
+
+.skill-header { /*Top section of the card (icon + title)*/
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.skill-icon { /*Container for the skill icon image*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    min-height: 2.5rem;
+}
+
+.skill-icon img { /*The actual <img> for the icon*/
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    display: block;
+}
+
+.skill-title { /*The title inside each card*/
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--darkblue);
+    margin: 0;
+}
+
+.skill-list { /*Container for the list of skills inside the card*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-item { /*A single skill entry (icon + text)*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.skill-name { /*Text label of the skill*/
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.skill-item:hover .skill-name { /*On hover, style the skill name*/
+    color: var(--github-color);
+    transition: color 0.2s;
+}
+
+@media (min-width: 600px) and (max-width: 799px) { /*Small tablets*/
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.2rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .skill-title {
+        font-size: 1.4rem;
+    }
+    .skill-card {
+        padding: 1.2rem;
+    }
+    .skill-icon img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) { /*For phones*/
+    .skills-section{
+        padding: 4rem 0.5rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.4rem;
+    }
+    .skills-grid {
+        gap: 0.6rem;
+        grid-template-columns: 1fr;
+    }
+    .skill-card {
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+    }
+    .skill-tile {
+        font-size: 1.2rem;
+    }
+    .skill-icon img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .skill-name {
+        font-size: 1rem;
+        padding: 0.2rem 0;
+    }
+}
+
+/* Skills Section Ends */
+
+/* About Me Section */
+.about-me-section { /*Outer container for About Me section*/
+    padding: 5rem 1rem;
+}
+
+.about-me-section-container { /*Inner layout container*/
+    max-width: 2500px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    gap: 2.0rem;
+}
+
+.about-me-title { /*Heading for the About Me section*/
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-me-description { /*Wrapper for the text paragraph*/
+    font-size: 1.5rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.about-me-buttons { /*Container for the buttons in About Me*/
+    margin-top: 3rem;
+}
+
+.btn-resume { /*Style for the Resume button*/
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-resume:hover { /*Hover state for the Resume button*/
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+@media (min-width: 800px) { /*For screens wider than 800px*/
+    .about-me-section {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* About Me Ends */
+
+/* Projects Start*/
+
+.projects-section { /*Outer container for projects*/
+    padding: 5rem 1rem;
+}
+
+.projects-grid { /*Grid layout for project cards*/
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) { /*For desktop and larger tablets*/
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card { /*Individual project card container*/
+    background: var(--bg-shade);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.project-card:hover { /*Hover effect for project cards*/
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px var(--primary-color);
+}
+
+.project-image { /*Wrapper around the project image*/
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img { /*The project image*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img { /*When hovering the card, affect the image*/
+    transform: scale(1.2);
+}
+
+.project-overlay { /*Invisible overlay that appears on hover*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay { /*Show overlay when hovering the card*/
+    opacity: 1;
+}
+
+.project-link { /*The circular link button shown over the image*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(168, 85, 247, 0.2);;
+    border: 2px solid var(--primary-color);
+    border-radius: 2rem;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.project-link:hover { /*Hover effect for the circular link*/
+    background: rgb(169, 85, 247);
+    transform: scale(1.5);
+}
+
+.project-content { /*Text content area of the card*/
+    padding: 1.5rem;
+}
+
+.projects-title { /*Title text inside the project card*/
+    color: var(--darkblue);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.project-title { /*Big section title shown above the grid*/
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 3.5rem;
+}
+
+.project-description { /*Short description text*/
+    color: var(--github-color);
+    line-height: 4;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.project-technologies { /*Container for tech tags/pills*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.tech-tag { /*A single technology tag/pill*/
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--primary-color);
+    padding: 0.5rem 0.7rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+}
+
+  /* Projects End */
+
+  /* Contact Start */
+  .contact-section { /*The overall contact section container*/
+    padding: 5rem 1 rem;
+  }
+
+  .contact-maintitle { /*Main title of the contact section (e.g., "Contact Me)*/
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 200px;
+  }
+
+  .contact-content { /*Wrapper for both the contact info and contact form*/
+    display: grid;
+    gap: 3rem;
+    max-width: 1800px;
+    margin: 70px;
+  }
+
+  @media (min-width: 800px) { /*Responsive layout: 2-column grid for larger screens*/
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+  }
+
+  .contact-information { /*Container holding contact info (email, phone, etc.)*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-subtitle { /*Subtitle text for info labels (Like "Email", "Phone")*/
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--darkblue);
+    margin-left: 10px;
+  }
+
+  .contact-paragraph { /*Paragraph text under contact subtitles*/
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-left: 15px;
+  }
+
+  .contact-item { /*One row of contact info (icon + text)*/
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 60px;
+  }
+
+  .contact-icon { /*The icon box for email/phone/social icons*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    color: var(--github-color);
+    flex-shrink: 0;
+  }
+
+  .contact-text { /*Wrapper for contact text (label + value)*/
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-label { /*Label text (e.g., "Email:")*/
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .contact-link { /*Links for clickable contact values*/
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+
+  .contact-link:hover{ /*Hover effect for contact links*/
+    color: var(--github-color);
+  }
+
+  .contact-value { /*Value text that is not a link*/
+    font-size: 1.5rem;
+  }
+
+  .contact-form { /*Styles for the actual contact form box*/
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(8px);
+    background: var(--bg-shade);
+  }
+
+  .form-group { /*Wrapper for each form field (label + input)*/
+    margin-bottom: 1rem;
+  }
+
+  .form-label { /*Labels for form fields*/
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+  }
+
+  .form-input, .form-textarea { /*Input fields and textareas*/
+    width: 100%;
+    padding: 0.6rem 0.1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-family: Arial;
+    margin-bottom: 1rem;
+  }
+
+  .form-input:focus, .form-textarea:focus { /*Focus effect for inputs*/
+    outline: none;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 1px #a855f7;
+  }
+
+  .form-textarea { /*Textarea specific styling*/
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  .submit-btn { /*Submit button*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    color: black;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    background: #a855f7;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover{ /*Hover effect for submit button*/
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px -5px var(--black);
+  }
+
+  .submit-btn:active { /*Active (clicked) state for submit button*/
+    transform: translateY(0);
+  }
+
+  .status-message { /*Staus message after submitting (success/error)*/
+    margin-top: 12px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .status-message.success { /*Success message*/
+    color: green;
+  }
+
+  .status-message.error { /*Error message*/
+    color: red;
+  }
+
+  /* Contact End */
+
+  /* Footer Start */
+  .footer-section { /*The overall footer container*/
+    display: flex;
+    padding: 109px 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--bg-shade);
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .footer-list  > ul { /*List of footer links (About, Contact, Projects, etc.)*/
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    gap: 43px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .footer-icon-social > ul { /*Social media icons in footer (GitHub, LinkedIn, etc.)*/
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .text-md { /*Medium text size used in footer*/
+    font-size: 1.5rem;
+  }
+
+  /* Footer End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
