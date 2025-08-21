@@ -6,8 +6,8 @@ It showcases my projects, skills, and provides an easy way to contact me.
 ---
 
 ## 🚀 Live Demo
-🔗 [View Portfolio](https://your-portfolio-demo-link.com)
-
+🔗 Frontend: [View Portfolio Live](https://portfolio-project-alpha-teal.vercel.app/)
+🔗 Backend API: [Portfolio API](https://portfolio-project-jrxv.onrender.com)
 ---
 
 ## 🛠️ Tech Stack
@@ -21,7 +21,7 @@ It showcases my projects, skills, and provides an easy way to contact me.
 
 | Home | About Me | Skills | Projects | Contact |
 |---|---|---|---|---|
-| ![Home page screenshot](screenshots/Home.png) | ![About Me screenshot](screenshots/About-Me.png) | ![Skills screenshot](screenshots/Skills.png) | ![Projects screenshot](screenshots/Projects.png) | ![Contact screenshot](screenshots/Contact.png) |
+| ![Home page screenshot](Frontend/public/screenshots/Home.png) | ![About Me screenshot](Frontend/public/screenshots/About-Me.png) | ![Skills screenshot](Frontend/public/screenshots/Skills.png) | ![Projects screenshot](Frontend/public/screenshots/Projects.png) | ![Contact screenshot](Frontend/public/screenshots/Contact.png) |
 ---
 
 ## ⚙️ Run Locally
@@ -44,8 +44,8 @@ npm start
 ---
 
 ## 📬 Contact
-- 💼 LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/abdulla-abdulla-350a0937b/)  
+- 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdulla-abdulla-350a0937b/)  
 - 📧 Email: abdulla.abdulla.salem97@gmail.com  
-- 🐙 GitHub: [Your GitHub](https://github.com/abdullaabdulla97)
+- 🐙 GitHub: [GitHub](https://github.com/abdullaabdulla97)
 
 ---
