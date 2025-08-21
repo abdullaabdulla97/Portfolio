@@ -21,7 +21,7 @@ It showcases my projects, skills, and provides an easy way to contact me.
 
 | Home | About Me | Skills | Projects | Contact |
 |---|---|---|---|---|
-| ![Home page screenshot](screenshots/Home.png) | ![About Me screenshot](screenshots/About-Me.png) | ![Skills screenshot](screenshots/Skills.png) | ![Projects screenshot](screenshots/Projects.png) | ![Contact screenshot](screenshots/Contact.png) |
+| ![Home page screenshot](Frontend/public/screenshots/Home.png) | ![About Me screenshot](Frontend/public/screenshots/About-Me.png) | ![Skills screenshot](Frontend/public/screenshots/Skills.png) | ![Projects screenshot](Frontend/public/screenshots/Projects.png) | ![Contact screenshot](Frontend/public/screenshots/Contact.png) |
 ---
 
 ## ⚙️ Run Locally
