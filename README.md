@@ -6,14 +6,14 @@ It showcases my projects, skills, and provides an easy way to contact me.
 ---
 
 ## 🚀 Live Demo
-🔗 Frontend: [View Portfolio Live](https://portfolio-project-alpha-teal.vercel.app/)
-🔗 Backend API: [Portfolio API](https://portfolio-project-jrxv.onrender.com)
+- 🔗 **Frontend:** [View Portfolio Live](https://portfolio-project-alpha-teal.vercel.app/)
+- 🔗 **Backend API:** [Portfolio API](https://portfolio-project-jrxv.onrender.com)
 ---
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, React Router, CSS  
 - **Backend:** Node.js, Express  
-- **Deployment:** Vercel (Frontend), Render/Heroku (Backend)
+- **Deployment:** Vercel (Frontend), Render (Backend)
 
 ---
 
@@ -44,8 +44,8 @@ npm start
 ---
 
 ## 📬 Contact
-- 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdulla-abdulla-350a0937b/)  
+- <img src="https://img.icons8.com/ios-glyphs/32/linkedin.png" height="20" width="20"/> LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdulla-abdulla-350a0937b/)  
 - 📧 Email: abdulla.abdulla.salem97@gmail.com  
-- 🐙 GitHub: [GitHub](https://github.com/abdullaabdulla97)
+- <img src="https://img.icons8.com/ios-glyphs/32/github.png" height="20" width="20"/> GitHub: [GitHub](https://github.com/abdullaabdulla97)
 
 ---
