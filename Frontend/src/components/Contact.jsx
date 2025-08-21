@@ -1,5 +1,5 @@
 import { useState } from "react"; // useState: manage contolled inputs + status message
-import {Mail, Phone, MapPin, Send} from "lucide-react"; // Import icon components from lucid-react
+import {Mail, Phone, MapPin, Send} from "lucide-react"; // Import icon components from lucide-react
 
 
 const contactInformation = [ // Static array of details displayed in the left column
@@ -40,10 +40,11 @@ function handleChange(e) { // Called on every keystroke in inputs/textarea
     });
 }
 
+const API_BASE = process.env.REACT_APP_API_URL;
 async function handleSubmit(e) { // Called when the form is submitted
     e.preventDefault(); // Prevent the browser from reloading the page by default
     try { // Try to send a POST request to the backend
-        const response = await fetch("http://localhost:5000/api/contact", { // Endpoint defined in server.js
+        const response = await fetch(`${API_BASE}/api/contact`, { // Endpoint defined in server.js
             method: "POST", // POST because we are sending data to create an email
             headers: {"Content-Type": "application/json"}, //Tell server we are sending JSON
             body: JSON.stringify(formInformation), // Convert form state object into JSON string
