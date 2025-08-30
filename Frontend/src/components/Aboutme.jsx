@@ -16,7 +16,7 @@ function Aboutme() { // Defines the Aboutme component
                     </p>
 
                     <p>
-                        I also built a Entertainement App in three weeks using React for the frontend, Java + Spring Boot for the backend, and PostgreSQL to store user accounts, watchlists, favourites, and watched items. It includes secure sign-up/sign-in, search and filtering, and real-time updates between the UI and database, making it easy for users to keep track of their favourite movies and TV shows.
+                        I also built a Media Tracker App in three weeks using React for the frontend, Java + Spring Boot for the backend, and PostgreSQL to store user accounts, watchlists, favourites, and watched items. It includes secure sign-up/sign-in, search and filtering, and real-time updates between the UI and database, making it easy for users to keep track of their favourite movies and TV shows.
 
                        
 
