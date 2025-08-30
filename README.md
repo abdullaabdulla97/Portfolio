@@ -6,8 +6,8 @@ It showcases my projects, skills, and provides an easy way to contact me.
 ---
 
 ## 🌐 Live Demo
-- 👉 **Frontend:** [View Portfolio Live](https://portfolio-project-alpha-teal.vercel.app/)
-- 👉 **Backend API:** [Portfolio API Server](https://portfolio-project-xg39.onrender.com)
+- 👉 **Frontend:** [View Portfolio Live]()
+- 👉 **Backend API:** [Portfolio API Server](https://portfolio-project-cwcd.onrender.com)
 
 ---
 
