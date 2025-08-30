@@ -7,7 +7,7 @@ It showcases my projects, skills, and provides an easy way to contact me.
 
 ## 🌐 Live Demo
 - 👉 **Frontend:** [View Portfolio Live](https://portfolio-project-alpha-teal.vercel.app/)
-- 👉 **Backend API:** [Portfolio API Server](https://portfolio-project-jrxv.onrender.com)
+- 👉 **Backend API:** [Portfolio API Server](https://portfolio-project-xg39.onrender.com)
 
 ---
 
@@ -55,7 +55,10 @@ cd ../Frontend
 # 2. Install dependencies
 npm install
 
-# 3. Start the development server
+# 3. Create a .env file to add the localhost URL
+echo "REACT_APP_API_URL=http://localhost:5000" > .env
+
+# 4. Start the development server
 npm start
 ```
 
