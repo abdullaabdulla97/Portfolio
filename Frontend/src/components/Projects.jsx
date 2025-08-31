@@ -3,14 +3,14 @@ import {Github} from "lucide-react" //Import a GitHub icon from lucid-react for 
 const projects = [ // Array of projects metadata rendered into cards.
     {title: "Weather App", // title of the card
      description:"A modern weather forecast application built with React and the OpenWeatherMap API. It allows users to search for cities, view the current weather, check an hourly forecast (24h), and see a 5-day forecast. Users can also toggle between Celsius and Fahrenheit and view summaries for a few major world cities.", // description of what the project does
-     image: "Frontend/images/Weather-App-Project.png", // Path to the image
+     image: "images/Weather-App-Project.png", // Path to the image
      technologies:["React", "JavaScript", "CSS", "REST API"], // tags indicating the technology used, rendered as pills
      github:"https://github.com/abdullaabdulla97/weather-app-project", // link to the project on github
     },
 
     {title: "Media Tracker App",
      description: "A full-stack movie and TV show tracking application built with React (frontend) and Spring Boot + PostgreSQL (backend). Users can sign up / log in, search for movies & shows (via TMDB API), and organize their Watchlist, Favourites, and Watched collections.",
-     image: "Frontend/Images/Media-Tracker-App-Project.png",
+     image: "images/Media-Tracker-App-Project.png",
      technologies: ["React", "JavaScript", "CSS", "Spring Boot", "Java", "PostgreSQL", "REST API"],
      github: "https://github.com/abdullaabdulla97/media-tracker-app-project",
     },
