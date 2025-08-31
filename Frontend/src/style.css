@@ -339,7 +339,7 @@ h3 { /*Styles for h3 elements*/
 /* Projects Start*/
 
 .projects-section { /*Outer container for projects*/
-    padding: 5rem 1rem;
+    padding: 5rem 8rem;
 }
 
 .projects-grid { /*Grid layout for project cards*/
