@@ -362,7 +362,7 @@ h3 { /*Styles for h3 elements*/
 
 .project-image { /*Wrapper around the project image*/
     position: relative;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -663,7 +663,7 @@ h3 { /*Styles for h3 elements*/
     }
 
 
-    .navbar--items { /*The sliding menu panel on small screens*/
+    .navbar--items { 
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -677,7 +677,7 @@ h3 { /*Styles for h3 elements*/
         z-index: 1001;
     }
 
-    .navbar--items ul { /*The list inside the mobile dropdown*/
+    .navbar--items ul { 
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -685,74 +685,82 @@ h3 { /*Styles for h3 elements*/
         margin: 0;
     }
 
-    .navbar--items ul li { /*Each list item in the dropdown*/
+    .navbar--items ul li { 
         text-align: center;
     }
 
-    .navbar--items ul li a { /*Each link in the dropdown*/
+    .navbar--items ul li a { 
         padding: 0.5rem;
     }
 
-    .navbar--items.active { /*Class added by JS to show the menu*/
+    .navbar--items.active { 
         top: 60px;
     }
 
-    .nav__hamburger.active :nth-child(1) { /*When active, animate the first bar*/
+    .nav__hamburger.active :nth-child(1) { 
         transform: rotate(45deg) translate(0.45rem, 0.2rem);
     }
 
-    .nav__hamburger.active :nth-child(2) { /*When active, hide the middle bar*/
+    .nav__hamburger.active :nth-child(2) { 
         opacity: 0;
     }
 
-    .nav__hamburger.active :nth-child(3) { /*When active, animate the third bar*/
+    .nav__hamburger.active :nth-child(3) { 
         transform: rotate(-45deg) translate(0.45rem, -0.2rem);
+    }
+    .btn-outline-primary {
+        display: none;
+    }
+
+    .hero-section { 
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 70px;
+    }
+
+    .hero-section-title, .hero-section-description { 
+        text-align: center;
+    }
+
+    .hero-section-content, .hero-section-content-box { 
+        align-items: center;
+    }
+
+    .hero-section-title { 
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .hero-section-content-box { 
+        gap: 10px;
+    }
+
+    .hero-description { 
+        text-align: center;
     }
 }
 
-@media only screen and (max-width: 1800px) { /*Very large screens down to 1800px*/
+@media (max-width: 1800px) { /*Very large screens down to 1800px*/
     .hero-section-title {
         font-size: 68px;
         line-height: 70px;
     }
 }
 
-@media only screen and (max-width: 1200px) { /*Tablet/phone responsiveness*/
-    .btn-outline-primary {
-        display: none;
-    }
-
-    .hero-section { /*Adjust hero layout on smaller screens*/
-        display: flex;
-        flex-direction: column-reverse;
-        padding-bottom: 70px;
-    }
-
-    .hero-section-title, .hero-section-description { /*For title and paragraph in hero*/
-        text-align: center;
-    }
-
-    .hero-section-content, .hero-section-content-box { /*Content wrapper*/
-        align-items: center;
-    }
-
-    .hero-section-title { /*Main hero title on small screens*/
-        font-size: 35px;
-        line-height: 40px;
-    }
-
-    .hero-section-content-box { /*Spacing adjustments on small screens*/
-        gap: 10px;
-    }
-
-    .hero-description { /*Intro line on small screens*/
-        text-align: center;
-    }
-}
-
-@media (min-width: 800px) { /*Screens that are 800px and wider*/
+@media (min-width: 800px) { /*Screens that are 800px and wider, for larger screens*/
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .about-me-section {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
     }
 }
 
@@ -776,57 +784,192 @@ h3 { /*Styles for h3 elements*/
     }
 }
 
-@media (max-width: 600px) { /*For phones*/
-    .skills-section{
-        padding: 4rem 0.5rem;
-    }
-    .section-title {
-        font-size: 1.3rem;
-        margin-bottom: 1.4rem;
-    }
-    .skills-grid {
-        gap: 0.6rem;
-        grid-template-columns: 1fr;
-    }
-    .skill-card {
-        padding: 0.8rem;
-        border-radius: 0.5rem;
-    }
-    .skill-tile {
-        font-size: 1.2rem;
-    }
-    .skill-icon img {
-        width: 1.6rem;
-        height: 1.6rem;
-    }
-    .skill-name {
-        font-size: 1rem;
-        padding: 0.2rem 0;
-    }
+  
+@media (max-width: 480px) { /* For mobile devices*/
+
+body { 
+    font-size: 16px; 
+}
+h1, h2, h3 { 
+    font-size: 28px; 
+    line-height: 1; 
+}
+.btn { 
+    padding: 12px 18px; 
+    font-size: 16px; 
+    line-height: 1; 
 }
 
-@media (min-width: 800px) { /*For screens wider than 800px*/
-    .about-me-section {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
+.navbar { 
+    padding: 8px 16px; 
+    box-shadow: 0 2px 20px rgba(0,0,0,.08); 
+}
+.navbar--content { 
+    font-size: 18px; 
+    line-height: 32px; 
+}
+.navbar--items ul { 
+    gap: 16px; 
+    padding: 1rem 0 .5rem; 
 }
 
-@media (min-width: 800px) { /*For desktop and larger tablets*/
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.hero-section {
+    padding: 96px 16px 48px;
+    gap: 16px;
+  }
+.hero-description { 
+    font-size: 18px; 
+    line-height: 1.4; 
+}
+.hero-section-title { 
+    font-size: 32px; 
+    line-height: 1; 
+}
+.hero-section-description { 
+    font-size: 16px; 
+    line-height: 1.6; 
+    text-align: left; 
+}
+  
+.skills-section { 
+    padding: 3rem 1rem; 
+}
+.skill-section-title { 
+    font-size: 1.8rem; 
+    margin-bottom: 1.2rem; 
+}
+.skills-grid { 
+    grid-template-columns: 1fr; 
+    gap: .8rem; 
+}
+.skill-card { 
+    padding: 1rem; 
+}
+.skill-title { 
+    font-size: 1.2rem; 
+}
+.skill-icon img { 
+    width: 1.8rem; 
+    height: 1.8rem; 
+}
+.skill-name { 
+    font-size: 1rem; 
 }
 
-@media (min-width: 800px) { /*Responsive layout: 2-column grid for larger screens*/
-    .contact-content {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
+.projects-section { 
+    padding: 3rem 1rem; 
+}
+.project-title { 
+    font-size: 2rem; 
+    padding: 1.5rem 0; 
+}
+.projects-grid { 
+    grid-template-columns: 1fr; 
+    gap: 1.25rem; 
+}
+.project-image { 
+    height: 160px; 
+}
+.project-content { 
+    padding: 1rem; 
+}
+.projects-title { 
+    font-size: 1.4rem; 
+}
+.project-description { 
+    font-size: 1rem; 
+    line-height: 1.6; 
+}
+.project-technologies { 
+    gap: .6rem; 
+}
+
+.about-me-section { 
+    padding: 3rem 1rem; 
+}
+.about-me-section-container { 
+    margin-top: 120px; 
+    gap: 1.2rem; 
+}
+.about-me-description { 
+    font-size: 1rem; 
+    gap: 1rem; 
+    align-items: stretch; 
+}
+.about-me-buttons {
+    display: flex;
+    justify-content: center;
   }
 
-/*Responsive Adjustment End */
+.contact-section {
+    padding: 3rem 1rem;
+}
 
+.contact-maintitle {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+}
+
+.contact-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.contact-item {
+    margin-top: 1rem;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+}
+
+.contact-link,
+.contact-value {
+    font-size: 0.9rem;
+}
+
+.form-label {
+    font-size: 0.8rem;
+}
+
+.form-input,
+.form-textarea {
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    padding: 0.7rem;
+}
+
+.status-message {
+    font-size: 0.8rem;
+}
+
+.footer-section { 
+    padding: 48px 16px;
+}
+.footer-list > ul, .footer-icon-social > ul { 
+    gap: 12px;
+    margin-right: 35px;
+}
+.text-md { 
+    font-size: 1rem; 
+}
+}
+
+/*Responsive Adjustment End */
 
 
 
