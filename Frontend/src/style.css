@@ -141,18 +141,11 @@ h3 { /*Styles for h3 elements*/
     height: 1.8rem;
     flex-direction: column;
     justify-content: space-around;
+    background: none;
+    border: none;
     position: absolute;
     top: 25px;
     right: 25px;
-}
-
-.nav__hamburger__line { /*Each of the three bars in the hamburger*/
-    display: block;
-    height: 0.3rem;
-    width: 100%;
-    background-color: black;
-    border-radius: 0.7rem;
-    transition: all ease-in-out 0.2s;
 }
 
 /* Navbar Style Ends */
@@ -195,6 +188,7 @@ h3 { /*Styles for h3 elements*/
     font-weight: 400;
     line-height: 36px;
 }
+
 
 /* Hero Section Style End */
 
@@ -655,13 +649,17 @@ h3 { /*Styles for h3 elements*/
 
   /* Footer End */
 
-/*Responsive Adjustment Start */
+  /*Responsive Adjustment Start */
 @media (max-width: 1200px) { /*Responsive rules for screens 1200px wide or smaller*/
+    .navbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
     .nav__hamburger {
         display: flex;
         z-index: 300;
     }
-
 
     .navbar--items { 
         display: flex;
@@ -697,17 +695,6 @@ h3 { /*Styles for h3 elements*/
         top: 60px;
     }
 
-    .nav__hamburger.active :nth-child(1) { 
-        transform: rotate(45deg) translate(0.45rem, 0.3rem);
-    }
-
-    .nav__hamburger.active :nth-child(2) { 
-        opacity: 0;
-    }
-
-    .nav__hamburger.active :nth-child(3) { 
-        transform: rotate(-49deg) translate(0.45rem, -0.4rem);
-    }
     .btn-outline-primary {
         display: none;
     }
@@ -912,7 +899,7 @@ h1, h2, h3 {
 }
 
 .contact-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack form + info */
     gap: 1.5rem;
     margin: 0;
 }
@@ -970,6 +957,7 @@ h1, h2, h3 {
 }
 
 /*Responsive Adjustment End */
+
 
 
 
