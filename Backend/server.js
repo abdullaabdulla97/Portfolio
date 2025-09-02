@@ -17,7 +17,7 @@ app.post("/api/contact", async (request, response) => { // Define POST endpoint 
 try { // Wrap email-sending logic in try/catch for robust error handling 
     const {error} = await resend.emails.send({ // Call Resend API to send a single email
         from: "Portfolio Contact <onboarding@resend.dev>", // Sender address, using the verified domain
-        to: ["abdullasalem983@outlook.com"], // Destination to my email address
+        to: ["abdulla.abdulla.salem97@gmail.com"], // Destination to my email address
         subject: `New message from ${name || "Visitor"}`, // Subject line includes the sender's name
         text: `From: ${name} <${email}>\n\n${message}`, // Plain-text body with the sender info + the message content
         reply_to: email, // So that "Reply" in your email client goes to the sender
