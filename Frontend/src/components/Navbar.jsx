@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react" // useState: local state for menu and useEffect: to perform side effects in your components
 import {Link} from "react-scroll" // used for smooth scrolling navigation to target IDs on the same page
+import {Menu, X} from "lucide-react"; // Import the "Menu" (hamburger) icon from lucide-react for mobile toggle button
 
 function Navbar() { // Defines the Navbar component
-    const [navActive, setNavActive] = useState(false); // To track whether the mobile menu is open (true) or closed (false)
-
-    const toggleNav = () => {
-        setNavActive(!navActive) // Toggles the mobile menu open/closed when hamburger is clicked
-    }
+    // navOpen tracks whether the mobile navigation menu is open (for small screens)
+    const [navOpen, setNavOpen] = useState(false);
 
     const closeMenu = () => { // function to close the menu
-        setNavActive(false) // Force close the mobile menu (used after Link click or resize)
+        setNavOpen(false) // Force close the mobile menu (used after Link click or resize)
     }
 
     useEffect(() => { // to handle window resize for small devices
@@ -33,13 +31,18 @@ function Navbar() { // Defines the Navbar component
     }, []); // empty array means this effect runs once
 
     return ( // Render the navigation bar
-        <nav className={`navbar ${navActive ? "active" : ""}`}> {/*Add "active" to root for CSS styling*/}
-            <a className={`nav__hamburger ${navActive ? "active" : ""} `} onClick={toggleNav}> {/*Add "active" to animate hamburger into an "X". Added onClick to toggle menu between open/closed */}
-                <span className="nav__hamburger__line"></span> {/*Top of the hamburger icon for CSS styling*/}
-                <span className="nav__hamburger__line"></span> {/*Middle of the hamburger icon for CSS styling*/}
-                <span className="nav__hamburger__line"></span> {/*Bottom of the hamburger icon for CSS styling*/}
-            </a>
-            <div className={`navbar--items ${navActive ? "active" : ""}`}> {/*Collapsible container for nav links*/}
+        <nav className={`navbar ${navOpen ? "active" : ""}`}> {/*Add "active" to root for CSS styling*/}
+            <button
+                className={`nav__hamburger ${navOpen ? "active" : ""} `} // Changes the style when active
+                type="button"
+                aria-label="Toggle menu"                    // Accessibility label
+                aria-expanded={navOpen ? "true" : "false"}  // Accessibility state
+                onClick={() => setNavOpen(v => !v)}         // Toggle navOpen on click
+            >
+                {navOpen ? <X size={28}/> : <Menu size={28}/>} {/* Lucide-react Menu (hamburger) icon and X icon when closing the menu */}
+            </button>
+
+            <div className={`navbar--items ${navOpen ? "active" : ""}`}> {/*Collapsible container for nav links*/}
                 <ul> {/*Unordered list*/}
                     <li>
                         <Link
@@ -101,3 +104,4 @@ function Navbar() { // Defines the Navbar component
 }
 
 export default Navbar; // Export Navbar so App.jsx can render it
+
