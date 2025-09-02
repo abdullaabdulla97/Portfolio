@@ -6,8 +6,8 @@ const contactInformation = [ // Static array of details displayed in the left co
     {
         icon: Mail,
         title: "Email",
-        value: "abdullasalem983@outlook.com",
-        link: "mailto:abdullasalem983@outlook.com"
+        value: "abdulla.abdulla.salem97@gmail.com",
+        link: "mailto:abdulla.abdulla.salem97@gmail.com"
     },
     {
         icon: Phone,
