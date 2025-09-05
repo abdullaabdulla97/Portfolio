@@ -15,6 +15,14 @@ const projects = [ // Array of projects metadata rendered into cards.
      github: "https://github.com/abdullaabdulla97/media-tracker-app-project",
     },
 
+    {title: "Fast Food Tier List App",
+     description: "An interactive tier list web application built with Node.js, Express, SQLite, and Handlebars (HBS). Users can log in, drag and drop fast-food restaurant logos into S–F tiers, and save their personalized ranking. Includes a simple admin view for user management and review.",
+     image: "screenshots/Tier-List.png",
+     technologies: ["Node.js", "Express.js", "HTML(Handlebars)", "CSS", "JavaScript", "SQLite"],
+     github: "https://github.com/abdullaabdulla97/fast-food-tier-list-project",
+    },
+
+
 ];
 
 function Projects() { // Define the projects component
