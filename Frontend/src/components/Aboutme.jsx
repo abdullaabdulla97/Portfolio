@@ -13,7 +13,7 @@ function Aboutme() { // Defines the Aboutme component
                         <li>Fast Food Tier List - An interactive ranking site using Node.js, Express, SQLite, and Handlebars templates. Features drag-and-drop ranking with dynamically fetched restaurant logos and persistent user rankings.</li>
                     </ul>
                     <p>
-                        Through these projects, I've gained hands-on experience with API integration, database management, authentication systems, responsive design, and deployment tools (Vercel/Render). I'm now looking for a Summer 2026 co-op position (Ottawa or remote) where I can contribute as a full-stack developer, front-end engineer, or software developer, while continuing to learn and grow.
+                        Through these projects, I've gained hands-on experience with Java + Spring Boot, API integration, database management, authentication systems, responsive front-end development, and deployment tools (Vercel/Render). I'm now looking for a Summer 2026 co-op position (Ottawa or remote) where I can contribute as a full-stack developer, front-end engineer, or software developer, while continuing to grow my expertise.
                     </p>
                     <div className="about-me-buttons"> {/*Call to action for the resume link*/}
                         <a href="/" className="btn btn-resume">Resume</a>
