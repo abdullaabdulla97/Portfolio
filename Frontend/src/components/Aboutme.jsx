@@ -9,7 +9,9 @@ function Aboutme() { // Defines the Aboutme component
                     </p>
                     <ul>
                         <li>Media Tracker App - A full-stack app with a Spring Boot backend + PostgreSQL database and a React frontend. Users can sign up, sign in, and manage movies/TV shows with features like watchlist, favourites, and watched toggles. Built responsive design in 3 weeks.</li>
+                        <br></br>
                         <li>Weather App - A React app that integrates the OpenWeatherMap API to display current conditions, 24-hour forecasts, and 5-day trends. Includes a Celsius/Fahrenheit toggle and responsive UI. Built in 2 weeks.</li>
+                        <br></br>
                         <li>Fast Food Tier List - An interactive ranking site using Node.js, Express, SQLite, and Handlebars templates. Features drag-and-drop ranking with dynamically fetched restaurant logos and persistent user rankings.</li>
                     </ul>
                     <p>
