@@ -12,8 +12,8 @@ const contactInformation = [ // Static array of details displayed in the left co
     {
         icon: Phone,
         title: "Phone Number",
-        value: "613-890-5976",
-        link: "tel:613-890-5976"
+        value: "343-987-1524",
+        link: "tel:343-987-1524"
     },
     {
         icon: MapPin,
