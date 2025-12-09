@@ -19,7 +19,7 @@ const skillCategories = [ //Array of categories, each with a title, icon, and sk
                 {icon: <img width="38" height="38" src="https://img.icons8.com/color/38/python--v1.png" alt="python--v1"/>, name: "Python"},
                 {icon: <img width="38" height="38" src="https://img.icons8.com/color/38/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>, name: "Java"},
                 {icon: <img width="38" height="38" src="https://img.icons8.com/color/38/c-programming.png" alt="c-programming"/>, name: "C"},
-                {icon: <img width="38" height="38" src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>, name: "C++"}
+                {icon: <img width="38" height="38" src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>, name: "C++"},
                 {icon: <img width="38" height="38" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/38/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-color-tal-revivo.png" alt="external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-color-tal-revivo"/>, name: "PostgreSQL"},
                 {icon: <img width="38" height="38" src="https://img.icons8.com/fluency/38/sql.png" alt="sql"/>, name: "SQL"},
                 {icon: <img width="38" height="38" src="https://img.icons8.com/color/34/spring-logo.png" alt="spring-boot"/>, name: "Spring Boot"},
