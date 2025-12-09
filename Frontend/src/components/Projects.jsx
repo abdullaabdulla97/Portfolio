@@ -14,15 +14,6 @@ const projects = [ // Array of projects metadata rendered into cards.
      technologies: ["React", "JavaScript", "CSS", "Spring Boot", "Java", "PostgreSQL", "REST API"],
      github: "https://github.com/abdullaabdulla97/media-tracker-app-project",
     },
-
-    {title: "Fast Food Tier List App",
-     description: "An interactive tier-list web app built with Node.js, Express, SQLite, and Handlebars. Users log in and drag-and-drop fast-food logos into S–F tiers, with rankings saved to SQLite. Includes a lightweight admin view for user management. Originally a COMP 2406 term project, later extended with a public registration page (/register), mobile-friendly drag-and-drop (Pointer Events), and Render deployment.",
-     image: "images/Tier-List.png",
-     technologies: ["Node.js", "Express.js", "HTML(Handlebars)", "CSS", "JavaScript", "SQLite"],
-     github: "https://github.com/abdullaabdulla97/fast-food-tier-list-project",
-    },
-
-
 ];
 
 function Projects() { // Define the projects component
