@@ -12,10 +12,9 @@ function Aboutme() { // Defines the Aboutme component
                         <br></br>
                         <li>Weather App - A React app that integrates the OpenWeatherMap API to display current conditions, 24-hour forecasts, and 5-day trends. Includes a Celsius/Fahrenheit toggle and responsive UI. Built in 2 weeks.</li>
                         <br></br>
-                        <li>Fast Food Tier List - An interactive ranking site using Node.js, Express, SQLite, and Handlebars templates. Features drag-and-drop ranking with dynamically fetched restaurant logos and persistent user rankings.</li>
                     </ul>
                     <p>
-                        Through these projects, I've gained hands-on experience with Java + Spring Boot, API integration, database management, authentication systems, responsive front-end development, and deployment tools (Vercel/Render). I'm now looking for a Summer 2026 co-op position (Ottawa or remote) where I can contribute as a full-stack developer, front-end engineer, or software developer, while continuing to grow my expertise.
+                        Through these projects, I've gained hands-on experience with Java + Spring Boot, API integration, database management, authentication systems, responsive front-end development.
                     </p>
                     <div className="about-me-buttons"> {/*Call to action for the resume link*/}
                         <a href="/" className="btn btn-resume">Resume</a>
