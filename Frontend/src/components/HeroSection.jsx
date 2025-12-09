@@ -8,7 +8,7 @@ export default function HeroSection() { // Define and export the HeroSection com
                         <span className="hero-section-title-color">Computer Science: <br></br> Software Engineering Student</span> {/*Added it in span to apply accent color, with a line break*/}
                     </h1>
                     {/*Paragraph statement under the main heading*/}
-                    <p className="hero-section-description">Hi, I'm Abdulla — a 3rd-year Computer Science (Software Engineering) student at Carleton University. I'm building real-world full-stack projects with React, Node.js, Express, PostgreSQL, Java and Spring Boot, while also strengthening my skills in Python and C. Currently preparing for a Summer 2026 co-op in Ottawa or remote, where I can apply my passion for front-end design, back-end development, and database systems to real industry problems.</p>  
+                    <p className="hero-section-description">Hi, I'm Abdulla — a 3rd-year Computer Science (Software Engineering) student at Carleton University. I'm building real-world full-stack projects with React, Node.js, Express, PostgreSQL, Java and Spring Boot, while also strengthening my skills in Python, C++, C and Java.</p>  
                 </div>
             </div>
         </section>
