@@ -20,4 +20,4 @@ function App() { // Defines the functional App component (root of the React tree
   );
 }
 
-export default App; {/*Export App so index.jsx can import and render it */}
+export default App; // Export App so index.jsx can import and render it
